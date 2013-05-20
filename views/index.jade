@@ -1,5 +1,8 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype 5
+html
+  head
+    script(src='/socket.io/socket.io.js')
+    title title
+  body
+    script(src='/init/js')
+    link(rel='stylesheet', href='/init/css')
