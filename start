@@ -1,0 +1,14 @@
+#!/bin/bash
+#################################
+#    Modurize Service Script    #
+#                               #
+#         Version 0.1           #
+#################################
+echo "Pre-install Modurize"
+echo "Compile CoffeeScript"
+coffee -c .
+echo "Compile Stylus"
+stylus .
+echo "Installed. Start Service"
+node app
+exit 0
