@@ -18,8 +18,12 @@
     });
   }
 
+  jsfile += fs.readFileSync(__dirname + '/../lib/modurize.io.js', {
+    encoding: 'utf-8'
+  });
+
   exports.js = function(req, res) {
-    return res.end(jsfile);
+    return res.end(jsfile + 'io.connect("//' + req.headers.host + '");');
   };
 
   exports.css = function(req, res) {
